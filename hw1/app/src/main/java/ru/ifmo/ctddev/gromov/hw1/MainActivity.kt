@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun addToDisplay(str: String) {
-        if (DISPLAY.text.contains('\n')) DISPLAY.text = str
+        if (DISPLAY.text.contains('=')) DISPLAY.text = str
         else DISPLAY.text = "${DISPLAY.text}$str"
     }
 
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         BUTTON_MINUS.setOnClickListener { addToDisplay(getString(R.string.button_minus)) }
         BUTTON_ZERO.setOnClickListener { addToDisplay(getString(R.string.button_zero)) }
         BUTTON_DOT.setOnClickListener { addToDisplay(getString(R.string.button_dot)) }
-        BUTTON_SOLVE.setOnClickListener { addToDisplay("\n=${Expression((DISPLAY.text as String).replace('×', '*').replace('÷', '/')).calculate()}") }
+        BUTTON_SOLVE.setOnClickListener { addToDisplay("=${Expression((DISPLAY.text as String).replace('×', '*').replace('÷', '/')).calculate()}") }
         BUTTON_PLUS.setOnClickListener { addToDisplay(getString(R.string.button_plus)) }
     }
 }
