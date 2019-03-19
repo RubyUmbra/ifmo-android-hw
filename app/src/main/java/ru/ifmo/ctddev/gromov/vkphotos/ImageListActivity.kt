@@ -85,18 +85,6 @@ class ImageListActivity : AppCompatActivity() {
         override fun getItemCount() = values.size
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            init {
-                ServiceReceiver(Handler()).apply {
-                    setReceiver(object : ServiceReceiver.Receiver {
-                        override fun onReceiveResult(resultCode: Int, resultData: Bundle) {
-                            if (resultCode == Activity.RESULT_OK)
-                                parentActivity.openFileOutput(resultData.getString("FILENAME"), Context.MODE_PRIVATE)
-                                    .use { it?.write(resultData.getByteArray("RESULT_VALUE")) }
-                        }
-                    })
-                }
-            }
-
             fun bind(item: ImagesContent.ImageItem) {
                 contentView.text = item.description
             }
