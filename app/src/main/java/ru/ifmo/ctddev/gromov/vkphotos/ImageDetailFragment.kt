@@ -37,11 +37,10 @@ class ImageDetailFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.image_detail, container, false)
         view = rootView.image_detail
-        if (!ImagesContent.setImageIntoView(context, image?.url, view))
-            context?.startService(Intent(context, Loader::class.java).apply {
-                putExtra("EXTRA_URL", image?.url ?: "")
-                putExtra("RECEIVER", receiver)
-            })
+        context?.startService(Intent(context, Loader::class.java).apply {
+            putExtra("EXTRA_URL", image?.url ?: "")
+            putExtra("RECEIVER", receiver)
+        })
         return rootView
     }
 }

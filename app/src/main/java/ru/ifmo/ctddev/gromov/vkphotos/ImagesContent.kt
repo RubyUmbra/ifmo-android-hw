@@ -1,12 +1,9 @@
 package ru.ifmo.ctddev.gromov.vkphotos
 
 import android.content.Context
-import android.widget.ImageView
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import com.google.gson.stream.JsonReader
-import com.squareup.picasso.Picasso
-import java.io.File
 import java.io.InputStreamReader
 import java.util.*
 import kotlin.math.min
@@ -41,13 +38,5 @@ object ImagesContent {
             o.get("text").asString,
             o.getAsJsonArray("sizes").last().asJsonObject.get("url").asString
         )
-    }
-
-    fun setImageIntoView(context: Context?, url: String?, view: ImageView): Boolean {
-        val filename = "img" + url?.hashCode().toString()
-        return if (context?.fileList()?.contains(filename) == true) {
-            Picasso.get().load(File(context.filesDir, filename)).into(view)
-            true
-        } else false
     }
 }
