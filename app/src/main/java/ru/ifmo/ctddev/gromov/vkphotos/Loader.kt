@@ -2,9 +2,10 @@ package ru.ifmo.ctddev.gromov.vkphotos
 
 import android.app.Activity
 import android.app.IntentService
-import android.content.Intent
 import android.content.Context
-import android.os.*
+import android.content.Intent
+import android.os.Bundle
+import android.os.ResultReceiver
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.IOException
@@ -28,7 +29,9 @@ class Loader : IntentService("Loader") {
                 connect()
                 val buf = ByteArrayOutputStream()
                 getInputStream().copyTo(buf)
-                buf.toByteArray()
+                val res = buf.toByteArray()
+                cacheDir.resolve("img" + url.hashCode().toString()).writeBytes(res)
+                res
             }
         } catch (e: IOException) {
             e.printStackTrace()

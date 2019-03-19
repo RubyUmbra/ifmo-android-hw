@@ -1,7 +1,6 @@
 package ru.ifmo.ctddev.gromov.vkphotos
 
 import android.app.Activity.RESULT_OK
-import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -26,8 +25,6 @@ class ImageDetailFragment : Fragment() {
                 if (resultCode == RESULT_OK) {
                     val res = resultData.getByteArray("RESULT_VALUE")
                     view.setImageBitmap(BitmapFactory.decodeByteArray(res, 0, res?.size ?: 0))
-                    context?.openFileOutput(resultData.getString("FILENAME"), Context.MODE_PRIVATE)
-                        .use { it?.write(res) }
                 }
             }
         })

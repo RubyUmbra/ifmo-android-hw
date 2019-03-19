@@ -1,22 +1,19 @@
 package ru.ifmo.ctddev.gromov.vkphotos
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import android.widget.TextView
-
 import kotlinx.android.synthetic.main.activity_image_list.*
-import kotlinx.android.synthetic.main.image_list_content.view.*
 import kotlinx.android.synthetic.main.image_list.*
+import kotlinx.android.synthetic.main.image_list_content.view.*
 
 class ImageListActivity : AppCompatActivity() {
     private var twoPane: Boolean = false
