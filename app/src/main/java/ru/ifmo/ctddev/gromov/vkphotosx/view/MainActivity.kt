@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 //        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         search_button.setOnClickListener { vm.reloadList(search_field.text.toString()) }
         vm.data.observe(this, Observer {
-            Log.d("hi", "1")
             (recycler.adapter as RecyclerAdapter).apply { posts = it }.notifyDataSetChanged()
         })
     }
