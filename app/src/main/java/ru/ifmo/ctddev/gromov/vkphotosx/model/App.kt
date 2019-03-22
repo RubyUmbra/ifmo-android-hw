@@ -1,9 +1,10 @@
-package ru.ifmo.ctddev.gromov.vkphotosx
+package ru.ifmo.ctddev.gromov.vkphotosx.model
 
 import android.app.Application
 import androidx.room.Room
 import kotlinx.coroutines.*
-import ru.ifmo.ctddev.gromov.vkphotosx.room.AppDB
+import ru.ifmo.ctddev.gromov.vkphotosx.model.room.AppDB
+import ru.ifmo.ctddev.gromov.vkphotosx.model.room.Post
 
 class App : Application() {
     override fun onCreate() {
@@ -17,8 +18,14 @@ class App : Application() {
         GlobalScope.launch {
             withContext(Dispatchers.Default) { db.postDAO().clean() }
             withContext(Dispatchers.Default) {
-                db.postDAO().insertAll(ApiFactory.api.getAsync(q = request).await()
-                    .response.items.map { Post(text = it.text, url = it.sizes.last().url) })
+                db.postDAO().insertAll(
+                    ApiFactory.api.getAsync(q = request).await()
+                    .response.items.map {
+                    Post(
+                        text = it.text,
+                        url = it.sizes.last().url
+                    )
+                })
             }
         }
     }

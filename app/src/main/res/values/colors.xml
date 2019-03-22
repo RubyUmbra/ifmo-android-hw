@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="button">#BBBBBB</color>
+    <color name="post">#DDDDFF</color>
+    <color name="fave_post">#41FFFF00</color>
 </resources>

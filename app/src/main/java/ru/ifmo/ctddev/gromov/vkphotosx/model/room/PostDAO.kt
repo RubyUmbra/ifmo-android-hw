@@ -1,8 +1,7 @@
-package ru.ifmo.ctddev.gromov.vkphotosx.room
+package ru.ifmo.ctddev.gromov.vkphotosx.model.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import ru.ifmo.ctddev.gromov.vkphotosx.Post
 
 @Dao
 interface PostDAO {

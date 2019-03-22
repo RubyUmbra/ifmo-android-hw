@@ -1,4 +1,4 @@
-package ru.ifmo.ctddev.gromov.vkphotosx
+package ru.ifmo.ctddev.gromov.vkphotosx.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,9 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import ru.ifmo.ctddev.gromov.vkphotosx.model.App
+import ru.ifmo.ctddev.gromov.vkphotosx.R
+import ru.ifmo.ctddev.gromov.vkphotosx.model.room.Post
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var post: Post
