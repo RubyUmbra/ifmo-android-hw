@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import ru.ifmo.ctddev.gromov.vkphotosx.model.json.Data
 
-interface Api {
+interface VkSearchApi {
     @GET("method/photos.search")
     fun getAsync(
         @Query("q") q: String = "landscape Fjord",

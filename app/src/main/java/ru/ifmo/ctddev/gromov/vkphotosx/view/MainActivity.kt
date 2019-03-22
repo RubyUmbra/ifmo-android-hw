@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        recycler.adapter = RecyclerAdapter(emptyList())
         vm = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-            .apply { viewModel = vm }.apply { this.request = String() }
+        recycler.adapter = RecyclerAdapter(emptyList())
+//        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        search_button.setOnClickListener { vm.reloadList(search_field.text.toString()) }
         vm.data.observe(this, Observer {
             Log.d("hi", "1")
             (recycler.adapter as RecyclerAdapter).apply { posts = it }.notifyDataSetChanged()

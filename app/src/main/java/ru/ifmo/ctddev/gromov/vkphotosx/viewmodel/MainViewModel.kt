@@ -6,6 +6,6 @@ import ru.ifmo.ctddev.gromov.vkphotosx.model.App
 import ru.ifmo.ctddev.gromov.vkphotosx.model.room.Post
 
 class MainViewModel : ViewModel() {
-    val data: LiveData<List<Post>> = App.db.postDAO().all()
-    fun reloadList(request: String): Unit = App.instance.reloadList(request)
+    val data: LiveData<List<Post>> = App.getData()
+    fun reloadList(request: String): Unit = App.reloadData(request)
 }

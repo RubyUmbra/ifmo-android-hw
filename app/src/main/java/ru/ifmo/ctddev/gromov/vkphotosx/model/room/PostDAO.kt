@@ -8,7 +8,7 @@ interface PostDAO {
     @Query("SELECT * FROM post")
     fun all(): LiveData<List<Post>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertAll(posts: Iterable<Post>)
 
     @Update

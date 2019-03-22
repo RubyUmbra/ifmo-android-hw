@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import ru.ifmo.ctddev.gromov.vkphotosx.model.App
 import ru.ifmo.ctddev.gromov.vkphotosx.R
+import ru.ifmo.ctddev.gromov.vkphotosx.model.App
 import ru.ifmo.ctddev.gromov.vkphotosx.model.room.Post
 import ru.ifmo.ctddev.gromov.vkphotosx.viewmodel.DetailViewModel
 
@@ -30,6 +28,6 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun update(fave: Boolean) {
-        if (post.isFave != fave) GlobalScope.launch { App.db.postDAO().update(post.apply { isFave = fave }) }
+        if (post.isFave != fave) App.updateData(post.apply { isFave = fave })
     }
 }
