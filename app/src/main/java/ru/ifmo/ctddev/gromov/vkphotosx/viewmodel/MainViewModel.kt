@@ -7,5 +7,6 @@ import ru.ifmo.ctddev.gromov.vkphotosx.model.room.Post
 
 class MainViewModel : ViewModel() {
     val data: LiveData<List<Post>> = App.getData()
-    fun reloadList(request: String): Unit = App.reloadData(request)
+    var request: String = "landscape fjord"
+    fun reloadList(): Unit = App.reloadData(request)
 }

@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="ru.ifmo.ctddev.gromov.vkphotosx.viewmodel.MainViewModel" />
+    </data>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -20,6 +29,7 @@
             android:paddingTop="10dp"
             android:paddingRight="15dp"
             android:paddingBottom="10dp"
+            android:text="@={vm.request}"
             tools:ignore="Autofill,LabelFor" />
 
         <TextView
@@ -32,6 +42,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="5dp"
             android:background="@color/button"
+            android:onClick="@{() -> vm.reloadList()}"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
@@ -46,3 +57,4 @@
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </LinearLayout>
+</layout>

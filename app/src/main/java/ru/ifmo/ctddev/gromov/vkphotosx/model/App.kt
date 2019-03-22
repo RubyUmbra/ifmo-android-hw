@@ -35,7 +35,7 @@ class App : Application() {
             GlobalScope.launch { db.postDAO().update(post) }
         }
 
-        fun reloadData(request: String = "landscape Fjord") {
+        fun reloadData(request: String = "landscape fjord") {
             GlobalScope.launch {
                 db.postDAO().clean()
                 db.postDAO().insertAll(loadDataFromWeb(request))
