@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/DISPLAY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_CLEAR"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BUTTON_LEFT_BRACKET"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_left_bracket"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_SEVEN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_RIGHT_BRACKET"
+        app:layout_constraintTop_toBottomOf="@+id/DISPLAY" />
+
+    <TextView
+        android:id="@+id/BUTTON_RIGHT_BRACKET"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_right_bracket"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_EIGHT"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_LEFT_BRACKET"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_CLEAR"
+        app:layout_constraintTop_toBottomOf="@+id/DISPLAY" />
+
+    <TextView
+        android:id="@+id/BUTTON_CLEAR"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_ac"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_NINE"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_RIGHT_BRACKET"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_BACKSPACE"
+        app:layout_constraintTop_toBottomOf="@+id/DISPLAY" />
+
+    <TextView
+        android:id="@+id/BUTTON_BACKSPACE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_backspace"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_DIVIDE"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_CLEAR"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DISPLAY" />
+
+    <TextView
+        android:id="@+id/BUTTON_SEVEN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_seven"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_FOUR"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_EIGHT"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_LEFT_BRACKET" />
+
+    <TextView
+        android:id="@+id/BUTTON_EIGHT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_eight"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_FIVE"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_SEVEN"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_NINE"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_RIGHT_BRACKET" />
+
+    <TextView
+        android:id="@+id/BUTTON_NINE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_nine"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_SIX"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_EIGHT"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_DIVIDE"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_CLEAR" />
+
+    <TextView
+        android:id="@+id/BUTTON_DIVIDE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_divide"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_MULTIPLY"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_NINE"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_BACKSPACE" />
+
+    <TextView
+        android:id="@+id/BUTTON_FOUR"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_four"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_ONE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_FIVE"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_SEVEN" />
+
+    <TextView
+        android:id="@+id/BUTTON_FIVE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_five"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_TWO"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_FOUR"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_SIX"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_EIGHT" />
+
+    <TextView
+        android:id="@+id/BUTTON_SIX"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_six"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_THREE"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_FIVE"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_MULTIPLY"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_NINE" />
+
+    <TextView
+        android:id="@+id/BUTTON_MULTIPLY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_multiply"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_MINUS"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_SIX"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_DIVIDE" />
+
+    <TextView
+        android:id="@+id/BUTTON_ONE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_one"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_DOT"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_TWO"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_FOUR" />
+
+    <TextView
+        android:id="@+id/BUTTON_TWO"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_two"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_ZERO"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_ONE"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_THREE"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_FIVE" />
+
+    <TextView
+        android:id="@+id/BUTTON_THREE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_three"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_SOLVE"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_TWO"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_MINUS"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_SIX" />
+
+    <TextView
+        android:id="@+id/BUTTON_MINUS"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_minus"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_PLUS"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_THREE"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_MULTIPLY" />
+
+    <TextView
+        android:id="@+id/BUTTON_DOT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_dot"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_ZERO"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_ONE" />
+
+    <TextView
+        android:id="@+id/BUTTON_ZERO"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_zero"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_DOT"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_SOLVE"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_TWO" />
+
+    <TextView
+        android:id="@+id/BUTTON_SOLVE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_solve"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_ZERO"
+        app:layout_constraintRight_toLeftOf="@+id/BUTTON_PLUS"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_THREE" />
+
+    <TextView
+        android:id="@+id/BUTTON_PLUS"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/button_plus"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/BUTTON_SOLVE"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON_MINUS" />
+
+</android.support.constraint.ConstraintLayout>
